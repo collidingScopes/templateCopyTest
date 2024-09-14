@@ -11,7 +11,15 @@ console.log(today);
 let todayFormatted = format(today,"yyyy-MM-dd");
 console.log(todayFormatted);
 
-const dateDisplay = document.querySelector(".todayDate");
-dateDisplay.textContent = todayFormatted;
-dateDisplay.style.fontWeight = "bold";
-dateDisplay.style.fontSize = "1.5em";
+const Color = require('color');
+const color1 = Color('#7743CE');
+const color2 = color1.lighten(0.3);
+const color3 = color1.lighten(0.6);
+
+document.querySelector(".color1").style.color = color1;
+document.querySelector(".color2").style.color = color2;
+document.querySelector(".color3").style.color = color3;
+
+console.log(color1.string());
+console.log(color2.string());
+console.log(color3.string());
